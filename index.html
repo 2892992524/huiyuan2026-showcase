@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>会员系统 — 作品展示</title>
+  <style>
+    :root {
+      --primary: #e11d48;
+      --primary-light: #fb7185;
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #fbbf24;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .hero {
+      text-align: center;
+      padding: 3.5rem 1.5rem 2.5rem;
+      background: linear-gradient(135deg, #4c0519 0%, #0f172a 65%);
+    }
+    .hero h1 { font-size: 2.1rem; margin-bottom: 0.5rem; }
+    .hero p { color: var(--muted); max-width: 640px; margin: 0 auto; }
+    .badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      border: 1px solid var(--primary-light);
+      background: rgba(225, 29, 72, 0.15);
+      color: var(--accent);
+      font-size: 0.85rem;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem 3rem; }
+    section { margin-top: 2.5rem; }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+    }
+    .intro { color: var(--muted); margin-top: 0.75rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .card img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      display: block;
+      background: #111827;
+    }
+    .card figcaption {
+      padding: 0.85rem 1rem 1rem;
+      font-size: 0.92rem;
+    }
+    .card figcaption strong { color: var(--accent); display: block; margin-bottom: 0.25rem; }
+    .card figcaption span { color: var(--muted); font-size: 0.85rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem; }
+    th, td { padding: 0.7rem 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    th { color: var(--muted); width: 130px; font-weight: 500; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .tag {
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(251, 191, 36, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      color: #fde68a;
+      font-size: 0.82rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>会员系统（huiyuan2026）</h1>
+    <p>会员制积分商城 + 任务激励 + 推广返现 · 微信小程序 + Vue 管理后台 + Go 后端</p>
+    <span class="badge">作品展示页 · 界面截图预览</span>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>项目概述</h2>
+      <p class="intro">
+        面向线下门店与线上会员联动的综合运营平台。会员可通过消费、做任务、推广拉新获得积分或现金奖励，
+        并在门店完成礼品兑换、提现核销等线下履约。系统包含小程序 C 端、Vue 管理后台与 Go REST API。
+      </p>
+      <div class="tags">
+        <span class="tag">积分商城</span>
+        <span class="tag">任务中心</span>
+        <span class="tag">推广返现</span>
+        <span class="tag">门店核销</span>
+        <span class="tag">生活电器商城</span>
+        <span class="tag">家政服务</span>
+        <span class="tag">邮件通知</span>
+        <span class="tag">角色权限</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>技术栈</h2>
+      <table>
+        <tr><th>小程序</th><td>微信原生小程序</td></tr>
+        <tr><th>管理后台</th><td>Vue 3 + Vant</td></tr>
+        <tr><th>后端</th><td>Go + MySQL（含 PHP 历史模块）</td></tr>
+        <tr><th>部署</th><td>Linux + Nginx + 自动化脚本</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>界面与功能截图</h2>
+      <div class="grid">
+        <figure class="card">
+          <img src="screenshots/01-home-banner.jpg" alt="首页 Banner" loading="lazy" />
+          <figcaption><strong>商城首页</strong><span>生活电器分类展示与运营 Banner</span></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="screenshots/02-product-fridge.jpg" alt="商品详情" loading="lazy" />
+          <figcaption><strong>商品展示</strong><span>电器商品图与分类浏览</span></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="screenshots/04-points-mall.jpg" alt="积分商城" loading="lazy" />
+          <figcaption><strong>积分商城</strong><span>积分兑换礼品、生成核销码</span></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="screenshots/03-gift-box.jpg" alt="礼品兑换" loading="lazy" />
+          <figcaption><strong>礼品兑换</strong><span>积分礼品展示与线下核销</span></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="screenshots/05-member-code.jpg" alt="会员码" loading="lazy" />
+          <figcaption><strong>会员码</strong><span>会员身份识别与门店扫码</span></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="screenshots/06-promo-poster.jpg" alt="推广海报" loading="lazy" />
+          <figcaption><strong>推广返现</strong><span>分享海报、上下级绑定与分成</span></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="screenshots/07-cash-exchange.jpg" alt="现金兑换" loading="lazy" />
+          <figcaption><strong>余额提现</strong><span>推广收益提现与审核流程</span></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="screenshots/08-housekeeping.jpg" alt="家政服务" loading="lazy" />
+          <figcaption><strong>家政服务</strong><span>服务预约、人员指派与核销</span></figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <footer>会员系统 · 作品展示页 · 仅供面试浏览</footer>
+</body>
+</html>
